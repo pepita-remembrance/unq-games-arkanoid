@@ -4,13 +4,14 @@ import android.os.Bundle;
 
 import com.badlogic.gdx.backends.android.AndroidApplication;
 import com.badlogic.gdx.backends.android.AndroidApplicationConfiguration;
-import ar.edu.unq.games.arkanoid.ArkanoidGame;
+
+import ar.edu.unq.games.arkanoid.controllers.MainController;
 
 public class AndroidLauncher extends AndroidApplication {
 	@Override
 	protected void onCreate (Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		AndroidApplicationConfiguration config = new AndroidApplicationConfiguration();
-		initialize(new ArkanoidGame(), config);
+		initialize(new MainController(), config);
 	}
 }

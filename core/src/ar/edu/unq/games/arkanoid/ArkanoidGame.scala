@@ -1,23 +1,18 @@
 package ar.edu.unq.games.arkanoid
 
-import com.badlogic.gdx.{ApplicationAdapter, Gdx}
-import com.badlogic.gdx.graphics.{GL20, Texture}
+import ar.edu.unq.games.arkanoid.layers.{BackgroundLayer, Layer}
+import com.badlogic.gdx.Gdx
+import com.badlogic.gdx.graphics.GL20
 import com.badlogic.gdx.graphics.g2d.SpriteBatch
 
-class ArkanoidGame extends ApplicationAdapter {
-  private[arkanoid] var batch: SpriteBatch = null
-  private[arkanoid] var img: Texture = null
+class ArkanoidGame extends Layer with BackgroundLayer {
 
-  override def create() {
-    batch = new SpriteBatch
-    img = new Texture("badlogic.jpg")
-  }
-
-  override def render() {
-    Gdx.gl.glClearColor(1, 0, 0, 1)
+  override def draw(spriteBatch: SpriteBatch): Unit = {
+    Gdx.gl.glClearColor(0, 0, 0, 1)
     Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT)
-    batch.begin()
-    batch.draw(img, 0, 0)
-    batch.end()
+    spriteBatch.begin()
+    super.draw(spriteBatch)
+    spriteBatch.end()
   }
+
 }
