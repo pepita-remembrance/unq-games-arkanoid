@@ -1,17 +1,17 @@
-package gdx.scala.demo;
+package ar.edu.unq.games.arkanoid;
 
 import org.robovm.apple.foundation.NSAutoreleasePool;
 import org.robovm.apple.uikit.UIApplication;
 
 import com.badlogic.gdx.backends.iosrobovm.IOSApplication;
 import com.badlogic.gdx.backends.iosrobovm.IOSApplicationConfiguration;
-import gdx.scala.demo.GdxScalaDemoGame;
+import ar.edu.unq.games.arkanoid.ArkanoidGame;
 
 public class IOSLauncher extends IOSApplication.Delegate {
     @Override
     protected IOSApplication createApplication() {
         IOSApplicationConfiguration config = new IOSApplicationConfiguration();
-        return new IOSApplication(new GdxScalaDemoGame(), config);
+        return new IOSApplication(new ArkanoidGame(), config);
     }
 
     public static void main(String[] argv) {

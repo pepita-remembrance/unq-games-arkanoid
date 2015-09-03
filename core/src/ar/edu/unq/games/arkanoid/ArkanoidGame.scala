@@ -1,14 +1,12 @@
-package gdx.scala.demo
+package ar.edu.unq.games.arkanoid
 
-import com.badlogic.gdx.ApplicationAdapter
-import com.badlogic.gdx.Gdx
-import com.badlogic.gdx.graphics.GL20
-import com.badlogic.gdx.graphics.Texture
+import com.badlogic.gdx.{ApplicationAdapter, Gdx}
+import com.badlogic.gdx.graphics.{GL20, Texture}
 import com.badlogic.gdx.graphics.g2d.SpriteBatch
 
-class GdxScalaDemoGame extends ApplicationAdapter {
-  private[demo] var batch: SpriteBatch = null
-  private[demo] var img: Texture = null
+class ArkanoidGame extends ApplicationAdapter {
+  private[arkanoid] var batch: SpriteBatch = null
+  private[arkanoid] var img: Texture = null
 
   override def create() {
     batch = new SpriteBatch
