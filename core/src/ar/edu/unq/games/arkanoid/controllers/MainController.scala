@@ -12,6 +12,7 @@ class MainController extends ApplicationAdapter {
   override def create(): Unit = {
     spriteBatch = new SpriteBatch
     arkanoidGame = new ArkanoidGame
+    arkanoidGame.init()
   }
 
   override def render(): Unit = {
