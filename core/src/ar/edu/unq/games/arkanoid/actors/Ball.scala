@@ -4,7 +4,7 @@ import com.badlogic.gdx.graphics.g2d.SpriteBatch
 import com.badlogic.gdx.math.Vector2
 
 class Ball extends Actor {
-  override val pos: Vector2 = _
+  var pos: Vector2 = _
 
   override def draw(spriteBatch: SpriteBatch): Unit = ???
 
