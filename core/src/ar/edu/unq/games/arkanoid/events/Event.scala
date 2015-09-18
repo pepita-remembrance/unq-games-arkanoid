@@ -1,8 +1,5 @@
 package ar.edu.unq.games.arkanoid.events
 
-import ar.edu.unq.games.arkanoid.inputProcessor.RxBus
-
-
 trait RxEvent
 case class InputEvent(input:InputEventType) extends RxEvent
 

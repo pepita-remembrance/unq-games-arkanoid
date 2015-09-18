@@ -2,6 +2,7 @@ package ar.edu.unq.games.arkanoid.actors
 
 import com.badlogic.gdx.graphics.g2d.SpriteBatch
 import com.badlogic.gdx.math.Vector2
+import com.badlogic.gdx.physics.box2d.World
 
 trait Actor {
 
@@ -16,3 +17,12 @@ trait Actor {
   def dispose():Unit={}
 
 }
+
+trait PhysicActor extends Actor {
+  def init(world:World):Unit = {
+    init()
+  }
+
+  override def act(delta: Float): Unit = {}
+}
+

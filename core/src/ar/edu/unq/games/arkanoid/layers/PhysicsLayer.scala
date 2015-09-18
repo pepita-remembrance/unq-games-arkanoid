@@ -14,7 +14,7 @@ trait PhysicsLayer extends Layer {
 
   override def init(): Unit = {
     world = new World(new Vector2(0f, 0f), true)
-    physicElements.foreach(_.init())
+    physicElements.foreach(_.init(world))
     super.init()
   }
 

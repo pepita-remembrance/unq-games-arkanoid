@@ -27,11 +27,4 @@ class ArkanoidInputProcessor extends InputAdapter {
 
 }
 
-object RxBus {
-  val _bus:Subject[RxEvent] = SerializedSubject[RxEvent](PublishSubject())
-  def send(o:RxEvent) = {
-    Gdx.app.log("RxBus", s"SEND $o")
-    _bus.onNext(o)
-  }
-  def toObservable:Observable[RxEvent] = _bus
-}
+
