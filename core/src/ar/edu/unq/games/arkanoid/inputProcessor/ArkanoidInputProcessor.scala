@@ -1,8 +1,8 @@
 package ar.edu.unq.games.arkanoid.inputProcessor
 
-import ar.edu.unq.games.arkanoid.events.{MoveRight, MoveLeft, InputEvent, RxEvent}
+import ar.edu.unq.games.arkanoid.events._
 import com.badlogic.gdx.Input.Keys
-import com.badlogic.gdx.InputAdapter
+import com.badlogic.gdx.{Gdx, InputAdapter}
 import rx.lang.scala.{Subject, Observable}
 import rx.lang.scala.subjects.{PublishSubject, SerializedSubject}
 
@@ -10,16 +10,17 @@ class ArkanoidInputProcessor extends InputAdapter {
 
   override def keyDown(keycode: Int): Boolean = {
     keycode match {
-      case Keys.LEFT => MoveLeft(isPressed=true).send()
-      case Keys.RIGHT => MoveRight(isPressed=true).send()
+      case Keys.LEFT  => MoveLeft.send()
+      case Keys.RIGHT => MoveRight.send()
+      case _ =>
     }
     true
   }
 
   override def keyUp(keycode: Int): Boolean = {
     keycode match {
-      case Keys.LEFT => MoveLeft(isPressed=false).send()
-      case Keys.RIGHT => MoveRight(isPressed=false).send()
+      case Keys.LEFT | Keys.RIGHT => Stop.send()
+      case _ =>
     }
     true
   }
@@ -27,7 +28,10 @@ class ArkanoidInputProcessor extends InputAdapter {
 }
 
 object RxBus {
-  val _bus:Subject[RxEvent] = new SerializedSubject[RxEvent](PublishSubject())
-  def send(o:RxEvent) = _bus.onNext(o)
+  val _bus:Subject[RxEvent] = SerializedSubject[RxEvent](PublishSubject())
+  def send(o:RxEvent) = {
+    Gdx.app.log("RxBus", s"SEND $o")
+    _bus.onNext(o)
+  }
   def toObservable:Observable[RxEvent] = _bus
 }

@@ -12,5 +12,7 @@ trait InputEventType {
     RxBus.send(InputEvent(this))
   }
 }
-case class MoveLeft(isPressed:Boolean) extends InputEventType
-case class MoveRight(isPressed:Boolean) extends InputEventType
+
+object MoveLeft  extends InputEventType
+object MoveRight extends InputEventType
+object Stop      extends InputEventType
