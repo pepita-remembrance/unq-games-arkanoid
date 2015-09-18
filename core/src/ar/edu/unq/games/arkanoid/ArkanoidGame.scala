@@ -3,6 +3,7 @@ package ar.edu.unq.games.arkanoid
 import ar.edu.unq.games.arkanoid.inputProcessor.ArkanoidInputProcessor
 import ar.edu.unq.games.arkanoid.layers.{PhysicsLayer, UILayer, BackgroundLayer, Layer}
 import com.badlogic.gdx.Gdx
+import com.badlogic.gdx.graphics.OrthographicCamera
 
 class ArkanoidGame extends Layer
   with UILayer

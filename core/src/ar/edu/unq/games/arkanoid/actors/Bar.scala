@@ -9,17 +9,18 @@ import com.badlogic.gdx.physics.box2d.BodyDef.BodyType
 import com.badlogic.gdx.physics.box2d._
 import rx.lang.scala.Subscription
 
-class Bar extends PhysicActor {
+class Bar(val x:Float = 300f, val y:Float = 50f) extends PhysicActor {
   val bar = new Texture("barra.jpg")
-  val INITIAL_POSITION = new Vector2(300f, 50f)
+  val INITIAL_POSITION = new Vector2(x, y)
+  val VELOCITY = 300
 
   var subscription: Subscription = _
 
   var body: Body = _
 
   object Velocities {
-    val left  = LEFT.scl(100)
-    val right = RIGHT.scl(100)
+    val left  = LEFT.scl(VELOCITY)
+    val right = RIGHT.scl(VELOCITY)
     val stop  = STOP
   }
 

@@ -2,9 +2,7 @@ package ar.edu.unq.games.arkanoid.inputProcessor
 
 import ar.edu.unq.games.arkanoid.events._
 import com.badlogic.gdx.Input.Keys
-import com.badlogic.gdx.{Gdx, InputAdapter}
-import rx.lang.scala.{Subject, Observable}
-import rx.lang.scala.subjects.{PublishSubject, SerializedSubject}
+import com.badlogic.gdx.InputAdapter
 
 class ArkanoidInputProcessor extends InputAdapter {
 

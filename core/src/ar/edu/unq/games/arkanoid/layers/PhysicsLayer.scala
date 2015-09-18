@@ -10,7 +10,7 @@ import scala.collection.mutable.ListBuffer
 trait PhysicsLayer extends Layer {
   var world: World = _
 
-  lazy val physicElements = ListBuffer(new Bar, new Ball)
+  lazy val physicElements = ListBuffer(new Bar,new Bar(200f,500f), new Ball)
 
   override def init(): Unit = {
     world = new World(new Vector2(0f, 0f), true)
