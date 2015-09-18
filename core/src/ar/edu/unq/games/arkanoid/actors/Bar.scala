@@ -11,7 +11,7 @@ import rx.lang.scala.Subscription
 
 class Bar extends PhysicActor {
   val bar = new Texture("barra.jpg")
-  val INITIAL_POSITION = new Vector2(200f, 50f)
+  val INITIAL_POSITION = new Vector2(300f, 50f)
 
   var subscription: Subscription = _
 
@@ -60,7 +60,7 @@ class Bar extends PhysicActor {
     initBody(world)
 
     val shape = new PolygonShape()
-    shape.setAsBox(bar.getWidth, bar.getHeight)
+    shape.setAsBox(bar.getWidth/2, bar.getHeight/2)
     val fixtureDef = new FixtureDef()
     fixtureDef.shape = shape
     body.createFixture(fixtureDef)
@@ -69,7 +69,7 @@ class Bar extends PhysicActor {
   }
 
   override def draw(spriteBatch: SpriteBatch): Unit = {
-    spriteBatch.draw(bar, pos.x, pos.y)
+    spriteBatch.draw(bar, pos.x-bar.getWidth/2, pos.y-bar.getHeight/2)
   }
 
   override def dispose(): Unit = {

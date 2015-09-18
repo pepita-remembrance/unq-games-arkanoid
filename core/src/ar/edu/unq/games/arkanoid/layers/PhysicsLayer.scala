@@ -1,6 +1,6 @@
 package ar.edu.unq.games.arkanoid.layers
 
-import ar.edu.unq.games.arkanoid.actors.Bar
+import ar.edu.unq.games.arkanoid.actors.{Ball, Bar}
 import com.badlogic.gdx.graphics.g2d.SpriteBatch
 import com.badlogic.gdx.math.Vector2
 import com.badlogic.gdx.physics.box2d.World
@@ -10,7 +10,7 @@ import scala.collection.mutable.ListBuffer
 trait PhysicsLayer extends Layer {
   var world: World = _
 
-  lazy val physicElements = ListBuffer(new Bar)
+  lazy val physicElements = ListBuffer(new Bar, new Ball)
 
   override def init(): Unit = {
     world = new World(new Vector2(0f, 0f), true)
