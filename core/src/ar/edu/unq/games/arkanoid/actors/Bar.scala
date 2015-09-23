@@ -32,14 +32,10 @@ class Bar(val x:Float = 300f, val y:Float = 50f) extends PhysicActor {
     case InputEvent(Stop) =>      direction(Velocities.stop)
   }
 
-  override def init(): Unit = {
-    super.init()
-    subscription = RxBus.toObservable.subscribe(inputConsumer)
-  }
-
   override def init(world: World): Unit = {
     super.init(world)
     createBody(world)
+    subscription = RxBus.toObservable.subscribe(inputConsumer)
   }
 
   //=================================================================
