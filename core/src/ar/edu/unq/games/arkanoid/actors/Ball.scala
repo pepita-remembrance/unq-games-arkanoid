@@ -8,27 +8,15 @@ import com.badlogic.gdx.physics.box2d._
 
 class Ball extends PhysicActor {
   val ball = new Texture("ball.png")
-  val INITIAL_POSITION = new Vector2(200f, 300f)
-
-  var body: Body = _
+  val bodyType = BodyType.DynamicBody
+  val initialPosition = new Vector2(200f, 300f)
 
   override def init(world: World): Unit = {
     super.init(world)
     createBody(world)
-    body.setLinearVelocity(new Vector2(0, -100))
+    val scalarVelocity: Float = -600
+    body.setLinearVelocity(new Vector2(0, scalarVelocity))
   }
-
-  //=========================== PHYSICS =============================
-
-  def initBody(world: World) = {
-    val definition = new BodyDef()
-    definition.`type` = BodyType.DynamicBody
-    definition.position.set(INITIAL_POSITION)
-    body = world.createBody(definition)
-  }
-
-  override def pos: Vector2 = body.getPosition
-
 
   //=================================================================
 

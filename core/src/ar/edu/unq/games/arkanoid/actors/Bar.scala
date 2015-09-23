@@ -11,12 +11,11 @@ import rx.lang.scala.Subscription
 
 class Bar(val x:Float = 300f, val y:Float = 50f) extends PhysicActor {
   val bar = new Texture("barra.jpg")
-  val INITIAL_POSITION = new Vector2(x, y)
+  val bodyType =  BodyType.KinematicBody
+  val initialPosition = new Vector2(x, y)
   val VELOCITY = 300
 
   var subscription: Subscription = _
-
-  var body: Body = _
 
   object Velocities {
     val left  = LEFT.scl(VELOCITY)
@@ -42,18 +41,6 @@ class Bar(val x:Float = 300f, val y:Float = 50f) extends PhysicActor {
     super.init(world)
     createBody(world)
   }
-
-  //=========================== PHYSICS =============================
-
-  def initBody(world: World) = {
-    val definition = new BodyDef()
-    definition.`type` = BodyType.KinematicBody
-    definition.position.set(INITIAL_POSITION)
-    body = world.createBody(definition)
-  }
-
-  override def pos: Vector2 = body.getPosition
-
 
   //=================================================================
 
