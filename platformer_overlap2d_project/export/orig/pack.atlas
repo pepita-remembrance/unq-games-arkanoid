@@ -11,6 +11,97 @@ ball
   orig: 80, 80
   offset: 0, 0
   index: -1
+block
+  rotate: false
+  xy: 411, 159
+  size: 20, 20
+  split: 8, 8, 8, 8
+  orig: 20, 20
+  offset: 0, 0
+  index: -1
+block
+  rotate: false
+  xy: 411, 159
+  size: 20, 20
+  orig: 20, 20
+  offset: 0, 0
+  index: -1
+block_n
+  rotate: false
+  xy: 224, 112
+  size: 7, 7
+  orig: 7, 7
+  offset: 0, 0
+  index: -1
+block_ne
+  rotate: false
+  xy: 411, 181
+  size: 20, 20
+  split: 0, 8, 8, 0
+  orig: 20, 20
+  offset: 0, 0
+  index: -1
+blockne
+  rotate: false
+  xy: 411, 181
+  size: 20, 20
+  split: 0, 8, 8, 0
+  orig: 20, 20
+  offset: 0, 0
+  index: -1
+block_ne
+  rotate: false
+  xy: 411, 181
+  size: 20, 20
+  orig: 20, 20
+  offset: 0, 0
+  index: -1
+block_one
+  rotate: false
+  xy: 343, 99
+  size: 20, 20
+  split: 8, 8, 8, 0
+  orig: 20, 20
+  offset: 0, 0
+  index: -1
+block_one
+  rotate: false
+  xy: 343, 99
+  size: 20, 20
+  orig: 20, 20
+  offset: 0, 0
+  index: -1
+blockone
+  rotate: false
+  xy: 343, 99
+  size: 20, 20
+  split: 8, 8, 8, 0
+  orig: 20, 20
+  offset: 0, 0
+  index: -1
+blockon
+  rotate: false
+  xy: 16, 67
+  size: 20, 20
+  split: 8, 0, 8, 0
+  orig: 20, 20
+  offset: 0, 0
+  index: -1
+block_on
+  rotate: false
+  xy: 16, 67
+  size: 20, 20
+  split: 8, 0, 8, 0
+  orig: 20, 20
+  offset: 0, 0
+  index: -1
+block_on
+  rotate: false
+  xy: 16, 67
+  size: 20, 20
+  orig: 20, 20
+  offset: 0, 0
+  index: -1
 btn
   rotate: false
   xy: 2, 35

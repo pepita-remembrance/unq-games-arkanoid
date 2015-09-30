@@ -1,4 +1,4 @@
-package com.uwsoft.platformer;
+package ar.edu.unq.games.arkanoid.controllers;
 
 import com.badlogic.gdx.ApplicationAdapter;
 import com.badlogic.gdx.Gdx;
@@ -9,14 +9,19 @@ import com.badlogic.gdx.utils.viewport.Viewport;
 import com.uwsoft.editor.renderer.SceneLoader;
 import com.uwsoft.editor.renderer.utils.ItemWrapper;
 
-public class PlatformerTutorial extends ApplicationAdapter {
+import ar.edu.unq.games.arkanoid.components.PlatformComponent;
+import ar.edu.unq.games.arkanoid.systems.PlatformSystem;
+import ar.edu.unq.games.arkanoid.scripts.Player;
+import ar.edu.unq.games.arkanoid.stages.UIStage;
+
+public class MainController extends ApplicationAdapter {
 
 	private SceneLoader sceneLoader;
 	private Viewport viewport;
 	private Player player;
 
 	private UIStage uiStage;
-	
+
 	@Override
 	public void create () {
 		viewport = new FitViewport(266, 160);
@@ -31,6 +36,7 @@ public class PlatformerTutorial extends ApplicationAdapter {
 		uiStage = new UIStage(sceneLoader.getRm());
 
         sceneLoader.addComponentsByTagName("platform", PlatformComponent.class);
+        sceneLoader.addComponentsByTagName("block", PlatformComponent.class);
 
         sceneLoader.getEngine().addSystem(new PlatformSystem());
 	}

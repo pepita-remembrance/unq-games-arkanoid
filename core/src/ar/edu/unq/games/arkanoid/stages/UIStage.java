@@ -1,4 +1,4 @@
-package com.uwsoft.platformer;
+package ar.edu.unq.games.arkanoid.stages;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.scenes.scene2d.Actor;

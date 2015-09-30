@@ -1,4 +1,4 @@
-package com.uwsoft.platformer;
+package ar.edu.unq.games.arkanoid.systems;
 
 import com.badlogic.ashley.core.ComponentMapper;
 import com.badlogic.ashley.core.Entity;
@@ -10,6 +10,8 @@ import com.uwsoft.editor.renderer.components.TransformComponent;
 import com.uwsoft.editor.renderer.components.physics.PhysicsBodyComponent;
 import com.uwsoft.editor.renderer.physics.PhysicsBodyLoader;
 import com.uwsoft.editor.renderer.utils.ComponentRetriever;
+
+import ar.edu.unq.games.arkanoid.components.PlatformComponent;
 
 /**
  * Created by azakhary on 8/9/2015.

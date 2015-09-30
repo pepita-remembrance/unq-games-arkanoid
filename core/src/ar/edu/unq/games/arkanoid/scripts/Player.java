@@ -1,4 +1,4 @@
-package com.uwsoft.platformer;
+package ar.edu.unq.games.arkanoid.scripts;
 
 import com.badlogic.ashley.core.Entity;
 import com.badlogic.gdx.Gdx;
