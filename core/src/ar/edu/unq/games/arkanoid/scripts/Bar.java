@@ -6,18 +6,13 @@ import com.badlogic.gdx.Input;
 import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.physics.box2d.World;
 import com.uwsoft.editor.renderer.components.DimensionsComponent;
-import com.uwsoft.editor.renderer.components.TransformComponent;
 import com.uwsoft.editor.renderer.components.physics.PhysicsBodyComponent;
 import com.uwsoft.editor.renderer.scripts.IScript;
 import com.uwsoft.editor.renderer.utils.ComponentRetriever;
 
-/**
- * Created by azakhary on 8/4/2015.
- */
-public class Player implements IScript {
+public class Bar implements IScript {
 
-    private Entity player;
-    private TransformComponent transformComponent;
+    private Entity bar;
     private DimensionsComponent dimensionsComponent;
     private PhysicsBodyComponent physicsBodyComponent;
 
@@ -27,14 +22,14 @@ public class Player implements IScript {
     private Vector2 speedRight;
     private Vector2 speedStop;
 
-    public Player(World world) {
+    public Bar(World world) {
         this.world = world;
     }
 
 
     @Override
     public void init(Entity entity) {
-        player = entity;
+        bar = entity;
 
         dimensionsComponent = ComponentRetriever.get(entity, DimensionsComponent.class);
         physicsBodyComponent = ComponentRetriever.get(entity, PhysicsBodyComponent.class);
@@ -76,24 +71,16 @@ public class Player implements IScript {
 //        world.rayCast(new RayCastCallback() {
 //            @Override
 //            public float reportRayFixture(Fixture fixture, Vector2 point, Vector2 normal, float fraction) {
-//                // Stop the player
+//                // Stop the bar
 //                speedLeft.y = 0;
 //
-//                // reposition player slightly upper the collision point
+//                // reposition bar slightly upper the collision point
 //                transformComponent.y  = point.y / PhysicsBodyLoader.getScale() + 0.01f;
 //
 //                return 0;
 //            }
 //        }, rayFrom, rayTo);
 //    }
-
-    public float getX() {
-        return transformComponent.x;
-    }
-
-    public float getY() {
-        return transformComponent.y;
-    }
 
     @Override
     public void dispose() {

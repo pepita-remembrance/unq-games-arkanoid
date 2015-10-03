@@ -8,12 +8,20 @@ ball
   rotate: false
   xy: 343, 181
   size: 20, 20
+  split: 9, 9, 9, 9
+  orig: 20, 20
+  offset: 0, 0
+  index: -1
+ball
+  rotate: false
+  xy: 16, 67
+  size: 20, 20
   orig: 20, 20
   offset: 0, 0
   index: -1
 block
   rotate: false
-  xy: 16, 67
+  xy: 343, 159
   size: 20, 20
   split: 8, 8, 8, 8
   orig: 20, 20
@@ -21,7 +29,7 @@ block
   index: -1
 block
   rotate: false
-  xy: 16, 67
+  xy: 343, 159
   size: 20, 20
   orig: 20, 20
   offset: 0, 0
@@ -35,7 +43,7 @@ block_n
   index: -1
 blockne
   rotate: false
-  xy: 343, 159
+  xy: 365, 181
   size: 20, 20
   split: 0, 8, 8, 0
   orig: 20, 20
@@ -43,22 +51,22 @@ blockne
   index: -1
 block_ne
   rotate: false
-  xy: 343, 159
+  xy: 365, 181
   size: 20, 20
+  split: 0, 8, 8, 0
   orig: 20, 20
   offset: 0, 0
   index: -1
 block_ne
   rotate: false
-  xy: 343, 159
+  xy: 365, 181
   size: 20, 20
-  split: 0, 8, 8, 0
   orig: 20, 20
   offset: 0, 0
   index: -1
 blockon
   rotate: false
-  xy: 365, 181
+  xy: 16, 45
   size: 20, 20
   split: 8, 0, 8, 0
   orig: 20, 20
@@ -66,7 +74,7 @@ blockon
   index: -1
 block_on
   rotate: false
-  xy: 365, 181
+  xy: 16, 45
   size: 20, 20
   split: 8, 0, 8, 0
   orig: 20, 20
@@ -74,14 +82,14 @@ block_on
   index: -1
 block_on
   rotate: false
-  xy: 365, 181
+  xy: 16, 45
   size: 20, 20
   orig: 20, 20
   offset: 0, 0
   index: -1
 blockone
   rotate: false
-  xy: 16, 45
+  xy: 38, 67
   size: 20, 20
   split: 8, 8, 8, 0
   orig: 20, 20
@@ -89,14 +97,14 @@ blockone
   index: -1
 block_one
   rotate: false
-  xy: 16, 45
+  xy: 38, 67
   size: 20, 20
   orig: 20, 20
   offset: 0, 0
   index: -1
 block_one
   rotate: false
-  xy: 16, 45
+  xy: 38, 67
   size: 20, 20
   split: 8, 8, 8, 0
   orig: 20, 20
@@ -144,7 +152,7 @@ pillar
   index: -1
 wall
   rotate: false
-  xy: 38, 67
+  xy: 365, 159
   size: 20, 20
   orig: 20, 20
   offset: 0, 0
