@@ -24,21 +24,21 @@ public class MainController extends ApplicationAdapter {
 
 	@Override
 	public void create () {
-		viewport = new FitViewport(266, 160);
+		viewport = new FitViewport(400, 300);
 		sceneLoader = new SceneLoader();
 		sceneLoader.loadScene("MainScene", viewport);
 
 		ItemWrapper root = new ItemWrapper(sceneLoader.getRoot());
 
-		player = new Player(sceneLoader.world);
-		root.getChild("player").addScript(player);
+//		player = new Player(sceneLoader.world);
+//		root.getChild("player").addScript(player);
 
-		uiStage = new UIStage(sceneLoader.getRm());
+//		uiStage = new UIStage(sceneLoader.getRm());
 
-        sceneLoader.addComponentsByTagName("platform", PlatformComponent.class);
-        sceneLoader.addComponentsByTagName("block", PlatformComponent.class);
+//        sceneLoader.addComponentsByTagName("platform", PlatformComponent.class);
+//        sceneLoader.addComponentsByTagName("block", PlatformComponent.class);
 
-        sceneLoader.getEngine().addSystem(new PlatformSystem());
+//        sceneLoader.getEngine().addSystem(new PlatformSystem());
 	}
 
 	@Override
@@ -48,9 +48,9 @@ public class MainController extends ApplicationAdapter {
 
 		sceneLoader.getEngine().update(Gdx.graphics.getDeltaTime());
 
-		uiStage.act();
-		uiStage.draw();
+//		uiStage.act();
+//		uiStage.draw();
 
-		((OrthographicCamera)viewport.getCamera()).position.x = player.getX()+player.getWidth()/2f;
+//		((OrthographicCamera)viewport.getCamera()).position.x = player.getX()+player.getWidth()/2f;
 	}
 }
