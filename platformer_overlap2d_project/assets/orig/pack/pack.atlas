@@ -45,7 +45,6 @@ block_ne
   rotate: false
   xy: 343, 159
   size: 20, 20
-  split: 0, 8, 8, 0
   orig: 20, 20
   offset: 0, 0
   index: -1
@@ -53,6 +52,7 @@ block_ne
   rotate: false
   xy: 343, 159
   size: 20, 20
+  split: 0, 8, 8, 0
   orig: 20, 20
   offset: 0, 0
   index: -1
@@ -91,7 +91,6 @@ block_one
   rotate: false
   xy: 16, 45
   size: 20, 20
-  split: 8, 8, 8, 0
   orig: 20, 20
   offset: 0, 0
   index: -1
@@ -99,6 +98,7 @@ block_one
   rotate: false
   xy: 16, 45
   size: 20, 20
+  split: 8, 8, 8, 0
   orig: 20, 20
   offset: 0, 0
   index: -1

@@ -30,8 +30,8 @@ public class MainController extends ApplicationAdapter {
 
 		ItemWrapper root = new ItemWrapper(sceneLoader.getRoot());
 
-//		player = new Player(sceneLoader.world);
-//		root.getChild("player").addScript(player);
+		player = new Player(sceneLoader.world);
+		root.getChild("bar").addScript(player);
 
 //		uiStage = new UIStage(sceneLoader.getRm());
 
@@ -51,6 +51,5 @@ public class MainController extends ApplicationAdapter {
 //		uiStage.act();
 //		uiStage.draw();
 
-//		((OrthographicCamera)viewport.getCamera()).position.x = player.getX()+player.getWidth()/2f;
 	}
 }
