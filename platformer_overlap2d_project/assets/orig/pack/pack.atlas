@@ -6,14 +6,14 @@ filter: Linear,Linear
 repeat: none
 ball
   rotate: false
-  xy: 329, 121
-  size: 80, 80
-  orig: 80, 80
+  xy: 365, 181
+  size: 20, 20
+  orig: 20, 20
   offset: 0, 0
   index: -1
 block
   rotate: false
-  xy: 411, 159
+  xy: 16, 45
   size: 20, 20
   split: 8, 8, 8, 8
   orig: 20, 20
@@ -21,7 +21,7 @@ block
   index: -1
 block
   rotate: false
-  xy: 411, 159
+  xy: 16, 45
   size: 20, 20
   orig: 20, 20
   offset: 0, 0
@@ -35,7 +35,7 @@ block_n
   index: -1
 block_ne
   rotate: false
-  xy: 411, 181
+  xy: 343, 181
   size: 20, 20
   split: 0, 8, 8, 0
   orig: 20, 20
@@ -43,7 +43,7 @@ block_ne
   index: -1
 blockne
   rotate: false
-  xy: 411, 181
+  xy: 343, 181
   size: 20, 20
   split: 0, 8, 8, 0
   orig: 20, 20
@@ -51,14 +51,14 @@ blockne
   index: -1
 block_ne
   rotate: false
-  xy: 411, 181
+  xy: 343, 181
   size: 20, 20
   orig: 20, 20
   offset: 0, 0
   index: -1
 block_one
   rotate: false
-  xy: 343, 99
+  xy: 343, 159
   size: 20, 20
   split: 8, 8, 8, 0
   orig: 20, 20
@@ -66,14 +66,14 @@ block_one
   index: -1
 block_one
   rotate: false
-  xy: 343, 99
+  xy: 343, 159
   size: 20, 20
   orig: 20, 20
   offset: 0, 0
   index: -1
 blockone
   rotate: false
-  xy: 343, 99
+  xy: 343, 159
   size: 20, 20
   split: 8, 8, 8, 0
   orig: 20, 20
@@ -104,7 +104,7 @@ block_on
   index: -1
 btn
   rotate: false
-  xy: 2, 35
+  xy: 329, 149
   size: 12, 52
   split: 4, 5, 6, 7
   orig: 12, 52
@@ -112,7 +112,7 @@ btn
   index: -1
 btnPressed
   rotate: false
-  xy: 329, 73
+  xy: 2, 41
   size: 12, 46
   split: 4, 5, 4, 5
   orig: 12, 46
@@ -140,5 +140,12 @@ pillar
   split: 0, 93, 65, 51
   pad: -1, -1, 65, 50
   orig: 93, 199
+  offset: 0, 0
+  index: -1
+wall
+  rotate: false
+  xy: 38, 67
+  size: 20, 20
+  orig: 20, 20
   offset: 0, 0
   index: -1
